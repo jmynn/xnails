@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300&family=Cormorant+SC:wght@300;400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/** nullstyle подключать в layout.tsx  */
+@import './stylekit.css';
+
+body {
+	font-weight: 400;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	/* font-family: 'Satoshi', sans-serif; */
+	/* font-size: var(--fz-text-regular); */
+	/* color: var(--color-black); */
+	/* background-color: var(--color-white); */
+}
+#content {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	width: inherit;
+}
