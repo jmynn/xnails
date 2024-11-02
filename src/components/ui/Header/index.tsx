@@ -6,6 +6,7 @@ import styles from './index.module.css';
 import { ReactNode, useEffect, useState } from 'react';
 import ButtonSignUp from '../ButtonSignUp';
 import ButtonBurger from '../ButtonBurger';
+import Container from '../Container';
 
 const Header = (): ReactNode => {
   const isTablet = useMediaQuery('(min-width: 768px)');
@@ -17,17 +18,19 @@ const Header = (): ReactNode => {
   }, [isDesktop]);
 
   return (
-    <header className={styles.header}>
-      {/* 1440 */}
-      {!isDesktop && <ButtonBurger {...{ isOpen, toggleMenu }} />}
-      {/* 767 */}
-      {isOpen && !isDesktop && <Navbar>{!isTablet && <ButtonSignUp />}</Navbar>}
-      <Logo />
-      {/* 1441 */}
-      {isDesktop && <Navbar />}
-      {/* 768 */}
-      {isTablet && <ButtonSignUp />}
-    </header>
+    <Container>
+      <header className={styles.header}>
+        {/* 1440 */}
+        {!isDesktop && <ButtonBurger {...{ isOpen, toggleMenu }} />}
+        {/* 767 */}
+        {isOpen && !isDesktop && <Navbar>{!isTablet && <ButtonSignUp />}</Navbar>}
+        <Logo />
+        {/* 1441 */}
+        {isDesktop && <Navbar />}
+        {/* 768 */}
+        {isTablet && <ButtonSignUp />}
+      </header>
+    </Container>
   );
 };
 

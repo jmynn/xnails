@@ -1,0 +1,18 @@
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    width: 174px;
+    gap: 15px 0; 
+    justify-content: space-between;
+}
+
+.links > a {
+    flex: 0 0 50%;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .links > a {
+        text-align: left;
+    }
+}

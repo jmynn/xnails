@@ -1,0 +1,16 @@
+.feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.text {
+    font-family: var(--ff-cormorant-g);
+    font-size: var(--fz-text-large);
+    font-weight: 400; 
+    line-height: var(--line-height);
+}
+
+
+

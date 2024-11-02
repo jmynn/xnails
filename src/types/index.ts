@@ -1,6 +1,7 @@
-export type TypeNavLink = {
+export type TypeLink = {
   href: `/${string}`;
   label: string;
 };
 
-export type TypeNavbarLinks = Record<'desktop' | 'mobile', TypeNavLink[]>
+export type TypeNavbarLinks = Record<'desktop' | 'mobile', TypeLink[]>
+export type TypeFooterLinks = Record<'desktop' | 'mobile', TypeLink[]>

@@ -1,13 +1,17 @@
+import { TypeLink } from '@/types';
 import Link from 'next/link';
-import styles from './index.module.css';
 import { FunctionComponent } from 'react';
-import { TypeNavLink } from '@/types';
+import styles from './index.module.css';
 
-type Props = TypeNavLink;
+type Props = TypeLink & {
+  style?: {
+    order?: number
+  }
+};
 
-const NavbarLink: FunctionComponent<Props> = ({ href, label }) => {
+const NavbarLink: FunctionComponent<Props> = ({ href, label, style }) => {
   return (
-    <Link className={styles.link + ' _transition'} href={href}>
+    <Link className={styles.link + ' _transition'} href={href} {...{style}}>
       {label}
     </Link>
   );

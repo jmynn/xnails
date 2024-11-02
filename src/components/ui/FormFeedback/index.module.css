@@ -1,0 +1,67 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.email {
+  background-color: transparent;
+  border: none;
+  color: var(--color-black);
+  flex: 1 1 auto;
+}
+.email::placeholder {
+  color: rgba(182, 182, 182, 1);
+}
+
+.block {
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-black);
+  width: 100%;
+}
+.block._error {
+  border-color: var(--color-error);
+}
+.errorMessage {
+  color: var(--color-error);
+}
+.btn {
+  background-color: transparent;
+}
+.permission {
+  display: flex;
+  align-items: first baseline;
+  gap: 10px;
+  line-height: var(--line-height);
+}
+.permission > input {
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  display: none;
+  scale: 0;
+}
+.permission > label > a {
+  text-decoration: underline;
+  display: block;
+  padding: 5px 0 0 0;
+}
+
+@media screen and (hover: hover) and (pointer: fine) {
+  .fake:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .permission {
+    font-size: 12px;
+  }
+  .permission > label > a {
+    padding: 0;
+  }
+}
