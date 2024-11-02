@@ -3,14 +3,14 @@
 @import './stylekit.css';
 
 body {
-	font-weight: 400;
 	display: flex;
 	justify-content: center;
 	position: relative;
-	/* font-family: 'Satoshi', sans-serif; */
-	/* font-size: var(--fz-text-regular); */
-	/* color: var(--color-black); */
-	/* background-color: var(--color-white); */
+	font-family: var(--ff-raleway);
+	font-weight: 300;
+	font-size: var(--fz-text-regular);
+	color: var(--color-black);
+	background-color: var(--color-secondary);
 }
 #content {
 	flex: 1 1 auto;
