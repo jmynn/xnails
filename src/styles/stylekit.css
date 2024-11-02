@@ -17,7 +17,7 @@
 
   --btn-fz: 16px;
   --btn-p: 12px 45px;
-  --btn-bg: var(--color-white);
+  --btn-bg: transparent;
   --btn-hover: var(--color-primary);
 
   --blob-size: 100px;
@@ -47,7 +47,7 @@
     --fz-text-medium: 24px;
 
     --btn-p: 10px 20px;
-  
+
     --blob-size: 199px;
     --blob-blur: blur(170px);
   }
@@ -55,7 +55,7 @@
 
 @media screen and (min-width: 1441px) {
   :root {
-    --container: 81.12vw;
+    --container: 1169px;
 
     --fz-headline-1: 80px;
     --fz-headline-2: 72px;
@@ -66,8 +66,10 @@
 
     --btn-p: 13px 26px;
     --btn-fz: 18px;
-  
+
     --blob-size: 335px;
     --blob-blur: blur(250px);
   }
 }
+
+/* @media screen and (hover: hover) and (pointer: fine) {} */

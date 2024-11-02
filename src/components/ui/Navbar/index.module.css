@@ -1,0 +1,54 @@
+.nav {
+  background-color: pink;
+  width: 73.1%;
+  height: auto;
+  position: absolute;
+  left: calc((100vw - var(--container)) / 2 * -1);
+  top: 0;
+  transition: var(--transition);
+  padding: 20px 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.logo {
+  width: 96px;
+  margin: 0 0 0 auto;
+}
+.logo > svg {
+  width: 100%;
+}
+.phone {
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+@media screen and (min-width: 768px) {
+  .phone {
+    order: 1;
+  }
+  .nav {
+    align-items: first baseline;
+    padding: 40px 30px;
+    width: 52.46%;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    left: 0;
+    gap: 60px;
+    width: auto;
+  }
+  .phone {
+    order: 2;
+  }
+}
+

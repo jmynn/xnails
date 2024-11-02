@@ -3,18 +3,30 @@
 @import './stylekit.css';
 
 body {
-	display: flex;
-	justify-content: center;
-	position: relative;
-	font-family: var(--ff-raleway);
-	font-weight: 300;
-	font-size: var(--fz-text-regular);
-	color: var(--color-black);
-	background-color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-family: var(--ff-raleway);
+  font-weight: 300;
+  font-size: var(--fz-text-regular);
+  color: var(--color-black);
+  background-color: var(--color-secondary);
+  line-height: var(--line-height);
 }
 #content {
-	flex: 1 1 auto;
-	display: flex;
-	flex-direction: column;
-	width: inherit;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+._transition {
+  transition: var(--transition);
+  opacity: 1;
+}
+
+@media screen and (hover: hover) and (pointer: fine) {
+  ._transition:hover {
+    transition: var(--transition);
+    opacity: 0.7;
+  }
 }

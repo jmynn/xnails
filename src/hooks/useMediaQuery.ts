@@ -14,7 +14,7 @@ const useMediaQuery: TypeHookMedia = (query) => {
     return () => mediaQueryList.removeEventListener('change', cb);
   };
 
-  return useSyncExternalStore(subscribe, getSnapshot);
+  return useSyncExternalStore(subscribe, getSnapshot, () => false);
 };
 
 export default useMediaQuery;

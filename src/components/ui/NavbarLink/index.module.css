@@ -1,0 +1,10 @@
+.link {
+  font-size: var(--fz-text-medium);
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 768px) {
+    .link {
+        font-size: inherit;
+    }
+}
