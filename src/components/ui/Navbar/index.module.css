@@ -1,5 +1,5 @@
 .nav {
-  background-color: pink;
+  background-color: var(--color-secondary);
   width: 73.1%;
   height: auto;
   position: absolute;
@@ -51,4 +51,3 @@
     order: 2;
   }
 }
-
