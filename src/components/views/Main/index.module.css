@@ -1,0 +1,134 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+}
+.subtitle {
+  font-weight: 300;
+  line-height: var(--line-height);
+  color: #181818;
+  white-space: pre-line;
+  margin: 0 0 15px 0;
+}
+.title {
+    font-weight: 400;
+    color: #181818;
+    font-family: var(--ff-cormorant-sc);
+    line-height: var(--line-height);
+    white-space: pre-line;
+    font-size: var(--fz-headline-1);
+}
+.title > span {
+    color: #181818;
+    font-family: var(--ff-cormorant-g);
+    font-size: var(--fz-headline-1);
+    font-style: italic;
+    font-weight: 300;
+    line-height: var(--line-height);
+}
+.pictures {
+    display: flex;
+    align-items: flex-end;
+    gap: 9px;
+    translate: 0 -40px;
+    z-index: -1;
+}
+.left {
+    display: flex;
+    align-items: center;
+    flex: 0 0 calc(51.2% - 4.5px);
+    gap: 4.5px;
+    padding: 0 0 10px 0;
+}
+.left > .img {
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    flex: 1 1 calc(33.333% - 4.5px);
+}
+.left > .img:first-child {
+    border-top-left-radius: 50%;
+}
+.left > .img:last-child {
+    border-top-right-radius: 50%;
+}
+.right {
+    flex: 0 0 calc(49% - 4.5px);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0 0 0;
+}
+
+@media screen and (min-width: 768px) {
+    .top {
+        gap: 40px;
+    }
+    .subtitle {
+        margin: 0;
+        white-space: normal;
+    }
+    .pictures {
+        translate: 0 -215px;
+    }
+    .main {
+        gap: 0;
+    }
+    .info {
+        flex-direction: row;
+        gap: 0;
+        margin: 0;
+        justify-content: space-between;
+        width: 100%;
+        translate: 0 -150px;
+    }
+    .left {
+        gap: 18px;
+        flex: 0 0 calc(51.2% - 10px);
+    }
+    .right {
+        flex: 0 0 calc(49% - 10px);
+    }
+    .left > .img {
+        flex: 1 1 calc(33.333% - 9px);
+    }
+    .pictures {
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .left {
+        gap: 28px;
+        flex: 0 0 calc(45% - 17.5px);
+    }
+    .right {
+        flex: 0 0 calc(55% - 17.5px);
+    }
+    .left > .img {
+        flex: 1 1 calc(33.333% - 14px);
+    }
+    .pictures {
+        gap: 35px;
+        translate: 0 -345px;
+    }
+    .info {
+        translate: 0 -280px;
+        gap: 111px;
+        width: auto;
+    }
+}
