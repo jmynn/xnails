@@ -17,3 +17,16 @@ export type TypePromoCard = {
     objectFit: 'cover';
   }
 } ;
+
+export type TypePriceItem = {
+  title: string;
+  cost: `${number} ₽` | `${number}-${number} ₽`;
+}
+
+export type TypePriceSection = {
+  title: string;
+  items: TypePriceItem[];
+  id: string;
+}
+
+export type TypePrice = TypePriceSection[]
