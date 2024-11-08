@@ -20,13 +20,13 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-        <Wrapper>
-          <Header />
-          <div id="content">
-            <Container>{children}</Container>
-          </div>
-          <Footer />
-        </Wrapper>
+          <Wrapper>
+            <Header />
+            <div id="content">
+              <Container>{children}</Container>
+            </div>
+            <Footer />
+          </Wrapper>
       </body>
     </html>
   );
