@@ -18,7 +18,7 @@ const PromoCarousel: FunctionComponent<Props> = ({ className }) => {
             key={i}
             {...{ ...card }}
             width={1169}
-            height={411}
+            height={480}
           />
         ))}
       </div>

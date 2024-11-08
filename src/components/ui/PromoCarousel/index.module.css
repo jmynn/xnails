@@ -1,58 +1,75 @@
 .carousel {
-    translate: calc((100vw - var(--container)) / 2 * -1) 0;
-    margin: 0 0 80px 0;
+  translate: calc((100vw - var(--container)) / 2 * -1) 0;
+  margin: 0 0 80px 0;
 }
 .cards {
-    display: flex;
-    animation-name: slider;
-    animation-duration: 15s;
-    animation-delay: 0ms;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
+  display: flex;
+  animation-name: slider;
+  animation-duration: 15s;
+  animation-delay: 0ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.cards > *:last-child > *:has(img) > img {
+  scale: 2;
+  translate: 30% -25%;
 }
 
 @keyframes slider {
-    0%, 49% {
-        translate: 0;
-    }
-    55%, 94% {
-        translate: -100vw 0;
-    }
-    100% {
-        translate: 0;
-    }
+  0%,
+  49% {
+    translate: 0;
+  }
+  55%,
+  94% {
+    translate: -100vw 0;
+  }
+  100% {
+    translate: 0;
+  }
 }
 
-
 @media screen and (min-width: 768px) {
-    .cards > *:last-child > * *{
-        color: var(--color-white);
-        text-align: center;
-    }
+  .cards > *:last-child > * * {
+    color: var(--color-white);
+    text-align: center;
+  }
 
-    .cards > *:first-child > *:not(:has(img)) {
-        width: 53.78%;
-    }
-    .cards > *:last-child > *:not(:has(img)) {
-        width: 46.09%;
-    }
+  .cards > *:first-child > *:not(:has(img)) {
+    width: 53.78%;
+  }
+  .cards > *:last-child > *:not(:has(img)) {
+    width: 46.09%;
+  }
+
+  .cards > *:last-child > *:has(img) > img {
+    translate: 30% -53%;
+  }
 }
 
 @media screen and (min-width: 1441px) {
-    .carousel {
-        translate: 0;   
-        overflow: hidden;
+  .carousel {
+    translate: 0;
+    overflow: hidden;
+  }
+
+  .cards > *:last-child > *:has(img) > img {
+    translate: 0% -40%;
+    scale: 1.2;
+  }
+  @keyframes slider {
+    0%,
+    49% {
+      translate: 0;
     }
-    @keyframes slider {
-        0%, 49% {
-            translate: 0;
-        }
-        55%, 94% {
-            translate: -100% 0;
-        }
-        100% {
-            translate: 0;
-        }
+    55%,
+    94% {
+      translate: -100% 0;
     }
+    100% {
+      translate: 0;
+    }
+  }
 }

@@ -15,7 +15,8 @@ const CardPromoCarousel: FunctionComponent<Props> = ({
   src,
   title,
   width,
-  text
+  text,
+  style
 }) => {
   return (
     <div className={styles.card}>
@@ -25,11 +26,7 @@ const CardPromoCarousel: FunctionComponent<Props> = ({
           height={height}
           src={src}
           alt="carousel card pic"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover'
-          }}
+          style={style}
           sizes='100vw'
         />
       </div>

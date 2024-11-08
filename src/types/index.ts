@@ -11,4 +11,9 @@ export type TypePromoCard = {
   title: string;
   text?: string;
   link: `/${string}`;
-};
+  style: {
+    width: string;
+    height: string;
+    objectFit: 'cover';
+  }
+} ;

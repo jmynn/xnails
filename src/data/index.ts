@@ -136,12 +136,22 @@ export const $PROMO_CARDS = [
     title: 'Вместе дешевле!',
     text: `Расскажите о нас своим подругам, знакомым, коллегам или родственникам.
 ${' '}Друг получает скидку 10% на первый визит, а вы - 10% кэшбэк с его первого визита`,
-    link: '/'
+    link: '/',
+    style: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover'
+    },
   },
   {
     // src: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fcarousel_1%2Fcarousel-2.png?alt=media&token=a8039d15-4c42-4a90-9670-b35ef6c7d1df',
     src: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fcarousel_1%2Ftest-2.jpg?alt=media&token=46040903-87ae-4ecb-aa70-974d6a3db088',
     title: 'Скидка 10% на первый визит',
-    link: '/'
+    link: '/',
+    style: {
+      width: '100%',
+      height: 'auto',
+      objectFit: 'cover'
+    },
   }
 ] satisfies TypePromoCard[];

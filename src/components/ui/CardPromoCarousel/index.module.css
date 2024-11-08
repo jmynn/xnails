@@ -8,7 +8,9 @@
 
 .image {
     width: 100%;
+    overflow: hidden;
 }
+
 
 .info {
     display: flex;
@@ -60,10 +62,9 @@
         text-align: left;
     }
     .image {
-        /* height: 53.516vw; */
+        /* height: min(411px, 53.516vw); */
         height: 411px;
     }
-
 }
 
 @media screen and (min-width: 1441px) {
