@@ -15,18 +15,23 @@ export type TypePromoCard = {
     width: string;
     height: string;
     objectFit: 'cover';
-  }
-} ;
+  };
+};
 
 export type TypePriceItem = {
-  title: string;
+  title: string | JSX.Element;
   cost: `${number} ₽` | `${number}-${number} ₽`;
-}
+};
+
+export type TypePriceImages = Record<'ellipse' | 'half', string>;
 
 export type TypePriceSection = {
   title: string;
   items: TypePriceItem[];
   id: string;
-}
+  images: TypePriceImages;
+};
 
-export type TypePrice = TypePriceSection[]
+export type TypePrice = {
+  [key: string]: TypePriceSection;
+};

@@ -1,0 +1,26 @@
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 0 60px 0;
+}
+.title {
+  font-family: var(--ff-cormorant-g);
+  font-size: var(--fz-headline-2);
+  font-weight: 400;
+  line-height: var(--line-height);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .price {
+        gap: 30px;
+        margin: 0 0 115px 0;
+    }
+}
+@media screen and (min-width: 1441px) {
+    .price {
+        gap: 40px;
+        margin: 0 0 200px 0;
+    }
+}

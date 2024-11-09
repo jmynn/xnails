@@ -28,5 +28,6 @@ body {
   ._transition:hover {
     transition: var(--transition);
     opacity: 0.7;
+    cursor: pointer;
   }
 }
