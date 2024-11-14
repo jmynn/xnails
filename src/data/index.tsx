@@ -61,6 +61,7 @@ export const $CONTACT_NUMBER = '+7 (812) 660-50-88';
 
 export const $PATH_SIGNUP = '/';
 export const $PATH_PRIVACY_POLICY = '/';
+export const $PATH_PRESENT_MORE = '/';
 
 export const $MAIN_PAGE_PICS = {
   main: `${$BASEPATH}/main/main-img.webp`,
@@ -134,8 +135,7 @@ export const $PROMO_CARDS = [
   {
     src: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fcarousel_1%2Fcarousel-1.png?alt=media&token=c6f078eb-023c-4b04-a5f3-f7a0418e3972',
     title: 'Вместе дешевле!',
-    text: `Расскажите о нас своим подругам, знакомым, коллегам или родственникам.
-${' '}Друг получает скидку 10% на первый визит, а вы - 10% кэшбэк с его первого визита`,
+    text: `Расскажите о нас своим подругам, знакомым, коллегам или родственникам.\n Друг получает скидку 10% на первый визит, а вы - 10% кэшбэк с его первого визита`,
     link: '/',
     style: {
       width: '100%',
@@ -174,8 +174,7 @@ export const $PRICE = {
         cost: `${900} ₽`
       },
       {
-        title: `Снятие + маникюр +
-${' '}Покрытие гелем Luxio, oniq  `,
+        title: `Снятие + маникюр +\n Покрытие гелем Luxio, oniq  `,
         cost: `${210}0 ₽`
       },
       {

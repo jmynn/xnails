@@ -10,18 +10,15 @@ import useMediaQuery from '@/hooks/useMediaQuery';
 const aboutInfo = [
   {
     title: '4',
-    subtitle: `года  мы радуем
-${' '} наших клиентов`
+    subtitle: `года  мы радуем\n наших клиентов`
   },
   {
     title: '10 000+',
-    subtitle: `маникюров мы сделали за
-${' '} последний год`
+    subtitle: `маникюров мы сделали за\n последний год`
   },
   {
     title: '3+',
-    subtitle: `наши мастера имеют
-${' '} опыт более 3 лет`
+    subtitle: `наши мастера имеют\n опыт более 3 лет`
   }
 ];
 
@@ -30,15 +27,10 @@ const Main = (): ReactNode => {
   return (
     <main className={styles.main}>
       <div className={styles.top}>
-        <h2 className={styles.subtitle}>{`XNAILS - студии маникюра 
-${' '} в Санкт-Петербурге`}</h2>
+        <h2 className={styles.subtitle}>{`XNAILS - студии маникюра\n в Санкт-Петербурге`}</h2>
         <h1 className={styles.title}>
-          <span>Мы знаем все о</span> красивом
-          {`
-${''}`}{' '}
-          <span>и</span> качественном{' '}
-          {`
-  ${''}`}{' '}
+          <span>Мы знаем все о</span> красивом{'\n'}
+          <span>и</span> качественном{'\n'}
           <span>покрытии</span>
         </h1>
         {isLarge && <MainLinks />}
