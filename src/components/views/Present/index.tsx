@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import styles from './index.module.css'
-import { ReactNode } from 'react'
-import ButtonSignUp from '@/components/ui/ButtonSignUp'
-import Link from 'next/link'
-import { $PATH_PRESENT_MORE } from '@/data'
+import Image from 'next/image';
+import styles from './index.module.css';
+import { ReactNode } from 'react';
+import ButtonSignUp from '@/components/ui/ButtonSignUp';
+import Link from 'next/link';
+import { $PATH_PRESENT_MORE } from '@/data';
 
 const Present = (): ReactNode => {
   return (
@@ -12,7 +12,7 @@ const Present = (): ReactNode => {
         <Image
           width={138}
           height={179}
-          alt="pic present"
+          alt="image present"
           sizes="100vw"
           src={
             'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fpresent%2F%D0%BF%D0%BE%D0%B4%D0%B0%D1%80%D0%BE%D0%BA-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=d99a758a-5796-4f9e-ad35-ed1749eca1b5'
@@ -30,12 +30,14 @@ const Present = (): ReactNode => {
           Подарочный сертификат – это приятный сюрприз для Ваших близких и
           идеальный подарок коллеге, который обязательно порадует и подарит
           массу положительных эмоций!
-          {'\n'}Вы можете оформить, как сертификат на бумажном носителе, так
-          и в электронном виде.
+          {'\n'}Вы можете оформить, как сертификат на бумажном носителе, так и в
+          электронном виде.
         </div>
         <div className={styles.more}>
           <ButtonSignUp />
-          <Link href={$PATH_PRESENT_MORE} className='_transition'>Подробнее</Link>
+          <Link href={$PATH_PRESENT_MORE} className="_transition">
+            Подробнее
+          </Link>
         </div>
       </div>
     </div>
