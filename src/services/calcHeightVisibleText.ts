@@ -11,12 +11,6 @@ const calcCountVisibleString: TypeCalcCountVisibleString = (el, funcCond) => {
   const height = Math.round(+window.getComputedStyle(el).height.split('px')[0]);
   const visibleHeight = Math.round(lineHeight * VISIBLE_STRING);
 
-  console.table([
-    ['lineHeight', lineHeight],
-    ['height', height],
-    ['visibleHeight', visibleHeight]
-  ]);
-
   if (height <= visibleHeight) {
     const computeVisibleString = Math.round(height / lineHeight);
     if (funcCond) funcCond();
