@@ -47,7 +47,5 @@
 }
 .text {
   overflow: hidden;
-  /* h 100% full text */
-  /* height: 6lh; */
   text-wrap: balance;
 }

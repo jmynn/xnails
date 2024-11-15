@@ -7,6 +7,7 @@ import LinkReview from '../LinkReview';
 import styles from './index.module.css';
 import {
   FunctionComponent,
+  useCallback,
   useEffect,
   useLayoutEffect,
   useRef,
@@ -29,9 +30,18 @@ const CardReviewCarousel: FunctionComponent<Props> = ({
   handleToPrevious
 }) => {
   const moreRef = useRef<HTMLDivElement | null>(null);
+  const arrowLeftRef = useRef<HTMLDivElement | null>(null);
+  const arrowRightRef = useRef<HTMLDivElement | null>(null);
   const [isFullReview, setIsFullReview] = useState<boolean>(false);
   const isLarge = useMediaQuery('(min-width: 768px)');
   const handleSetTrueFullReview = () => setIsFullReview(true);
+  const setArrowsPosition = useCallback((position: number) => {
+    if (!arrowLeftRef.current || !arrowRightRef.current) return;
+    const newPosition = position / 2;
+    arrowLeftRef.current.style.translate = `0 ${newPosition}lh`;
+    arrowRightRef.current.style.translate = `0 ${newPosition}lh`;
+    return;
+  }, []);
 
   useLayoutEffect(() => {
     if (!moreRef.current) return;
@@ -46,9 +56,11 @@ const CardReviewCarousel: FunctionComponent<Props> = ({
       const computeVisibleString = Math.round(height / lineHeight);
       moreRef.current.style.height = `${computeVisibleString}lh`;
       handleSetTrueFullReview();
+      setArrowsPosition(computeVisibleString);
       return;
     }
     moreRef.current.style.height = `${VISIBLE_STRING}lh`;
+    setArrowsPosition(VISIBLE_STRING);
     return;
   }, []);
 
@@ -80,6 +92,7 @@ const CardReviewCarousel: FunctionComponent<Props> = ({
         <div
           className={styles.arrow + ' _transition'}
           onClick={handleToPrevious}
+          ref={arrowLeftRef}
         >
           <IconArrowCarousel direction="left" />
         </div>
@@ -96,7 +109,11 @@ const CardReviewCarousel: FunctionComponent<Props> = ({
             </button>
           )}
         </div>
-        <div className={styles.arrow + ' _transition'} onClick={handleToNext}>
+        <div
+          className={styles.arrow + ' _transition'}
+          onClick={handleToNext}
+          ref={arrowRightRef}
+        >
           <IconArrowCarousel direction="right" />
         </div>
       </div>
