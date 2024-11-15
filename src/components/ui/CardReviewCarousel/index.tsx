@@ -14,13 +14,12 @@ import {
   useState
 } from 'react';
 import { TypeReview } from '@/types';
+import calcCountVisibleString from '@/services/calcHeightVisibleText';
 
 type Props = TypeReview & {
   handleToNext: () => void;
   handleToPrevious: () => void;
 };
-
-const VISIBLE_STRING = 6;
 
 const CardReviewCarousel: FunctionComponent<Props> = ({
   author,
@@ -29,7 +28,7 @@ const CardReviewCarousel: FunctionComponent<Props> = ({
   handleToNext,
   handleToPrevious
 }) => {
-  const moreRef = useRef<HTMLDivElement | null>(null);
+  const reviewRef = useRef<HTMLDivElement | null>(null);
   const arrowLeftRef = useRef<HTMLDivElement | null>(null);
   const arrowRightRef = useRef<HTMLDivElement | null>(null);
   const [isFullReview, setIsFullReview] = useState<boolean>(false);
@@ -44,29 +43,19 @@ const CardReviewCarousel: FunctionComponent<Props> = ({
   }, []);
 
   useLayoutEffect(() => {
-    if (!moreRef.current) return;
-    const lineHeight = +window
-      .getComputedStyle(moreRef.current)
-      .lineHeight.split('px')[0];
-    const height = +window
-      .getComputedStyle(moreRef.current)
-      .height.split('px')[0];
-    const visibleHeight = Math.round(lineHeight * VISIBLE_STRING);
-    if (height < visibleHeight) {
-      const computeVisibleString = Math.round(height / lineHeight);
-      moreRef.current.style.height = `${computeVisibleString}lh`;
-      handleSetTrueFullReview();
-      setArrowsPosition(computeVisibleString);
-      return;
-    }
-    moreRef.current.style.height = `${VISIBLE_STRING}lh`;
-    setArrowsPosition(VISIBLE_STRING);
+    if (!reviewRef.current) return;
+    const computedVisibleString = calcCountVisibleString(
+      reviewRef.current,
+      () => handleSetTrueFullReview()
+    );
+    reviewRef.current.style.height = `${computedVisibleString}lh`;
+    setArrowsPosition(computedVisibleString);
     return;
   }, []);
 
   useEffect(() => {
-    if (!moreRef.current || !isFullReview) return;
-    moreRef.current.style.height = '100%';
+    if (!reviewRef.current || !isFullReview) return;
+    reviewRef.current.style.height = '100%';
   }, [isFullReview]);
 
   return (
@@ -97,7 +86,7 @@ const CardReviewCarousel: FunctionComponent<Props> = ({
           <IconArrowCarousel direction="left" />
         </div>
         <div className={styles.review}>
-          <div className={styles.text} ref={moreRef} id="test">
+          <div className={styles.text} ref={reviewRef} id="test">
             {review}
           </div>
           {!isFullReview && (
