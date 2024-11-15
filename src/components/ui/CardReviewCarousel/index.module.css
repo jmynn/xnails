@@ -1,0 +1,53 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.author {
+  font-weight: 500;
+  line-height: var(--line-height);
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.rate {
+  display: flex;
+  align-items: center;
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.arrow {
+  flex: 0 0 8px;
+  translate: 0 3lh;
+}
+
+.more {
+  background: transparent;
+  color: #ababab;
+}
+.text {
+  overflow: hidden;
+  /* h 100% full text */
+  /* height: 6lh; */
+  text-wrap: balance;
+}

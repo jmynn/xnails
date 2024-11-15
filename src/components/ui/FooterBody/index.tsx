@@ -1,13 +1,13 @@
 'use client';
+import { $PATH_PRIVACY_POLICY } from '@/data';
 import useMediaQuery from '@/hooks/useMediaQuery';
-import styles from './index.module.css';
+import Link from 'next/link';
 import { ReactNode } from 'react';
 import FooterFeedback from '../FooterFeedback';
+import FooterInfo from '../FooterInfo';
 import FooterNavbar from '../FooterNavbar';
 import FooterSocials from '../FooterSocials';
-import FooterInfo from '../FooterInfo';
-import Link from 'next/link';
-import { $PATH_PRIVACY_POLICY } from '@/data';
+import styles from './index.module.css';
 
 const FooterBody = (): ReactNode => {
   const isLarge = useMediaQuery('(min-width: 768px)');
@@ -29,7 +29,7 @@ const FooterBody = (): ReactNode => {
           <div className={styles.cl_2}>
             <FooterNavbar />
             <Link href={$PATH_PRIVACY_POLICY} className="_transition">
-              политика конфиденциальности
+              Политика конфиденциальности
             </Link>
           </div>
           <div className={styles.cl_3}>

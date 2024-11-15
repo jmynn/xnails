@@ -1,4 +1,4 @@
-import { TypeNavbarLinks, TypePrice, TypePromoCard } from '@/types';
+import { TypeNavbarLinks, TypePrice, TypePromoCard, TypeReview } from '@/types';
 
 const $BASEPATH = '';
 
@@ -62,6 +62,7 @@ export const $CONTACT_NUMBER = '+7 (812) 660-50-88';
 export const $PATH_SIGNUP = '/';
 export const $PATH_PRIVACY_POLICY = '/';
 export const $PATH_PRESENT_MORE = '/';
+export const $PATH_REVIEW = '/';
 
 export const $MAIN_PAGE_PICS = {
   main: `${$BASEPATH}/main/main-img.webp`,
@@ -178,9 +179,23 @@ export const $PRICE = {
         cost: `${210}0 ₽`
       },
       {
-        title: <>Дизайн ногтей <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
-        <path d="M4.55664 7.28076L0.659527 0.530761L8.45376 0.530762L4.55664 7.28076Z" fill="#181818"/>
-        </svg></>,
+        title: (
+          <>
+            Дизайн ногтей{' '}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="9"
+              height="8"
+              viewBox="0 0 9 8"
+              fill="none"
+            >
+              <path
+                d="M4.55664 7.28076L0.659527 0.530761L8.45376 0.530762L4.55664 7.28076Z"
+                fill="#181818"
+              />
+            </svg>
+          </>
+        ),
         cost: `${20}-${300} ₽`
       },
       {
@@ -197,8 +212,9 @@ export const $PRICE = {
       }
     ],
     images: {
-      ellipse: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=0f5dd0ff-f2af-4bb1-a2d6-1fbdb429da42',
-      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=dc0600e2-c0f0-48a0-9030-bd10297ca7dd',
+      ellipse:
+        'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=0f5dd0ff-f2af-4bb1-a2d6-1fbdb429da42',
+      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=dc0600e2-c0f0-48a0-9030-bd10297ca7dd'
     }
   },
   increase: {
@@ -212,8 +228,9 @@ export const $PRICE = {
       { title: 'Донаращивание сломанного ногтя', cost: `${200} ₽` }
     ],
     images: {
-      ellipse: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BD%D0%B0%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=a07a6da9-4b0b-4b9b-83eb-4f168a16a303',
-      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BD%D0%B0%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=0f1133df-562e-43b5-8b42-a4f463129371',
+      ellipse:
+        'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BD%D0%B0%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=a07a6da9-4b0b-4b9b-83eb-4f168a16a303',
+      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BD%D0%B0%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=0f1133df-562e-43b5-8b42-a4f463129371'
     }
   },
   pedicure: {
@@ -226,8 +243,9 @@ export const $PRICE = {
       { title: 'Снятие + педикюр + покрытие', cost: `${2700} ₽` }
     ],
     images: {
-      ellipse: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=e5f5ea91-4b35-49bc-bedb-c1548b5143ba',
-      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=dc0600e2-c0f0-48a0-9030-bd10297ca7dd',
+      ellipse:
+        'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=e5f5ea91-4b35-49bc-bedb-c1548b5143ba',
+      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=dc0600e2-c0f0-48a0-9030-bd10297ca7dd'
     }
   },
   eyebrows: {
@@ -243,11 +261,26 @@ export const $PRICE = {
       { title: 'Ламинирование + коррекция + окрашивание', cost: `${2300} ₽` }
     ],
     images: {
-      ellipse: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%B1%D1%80%D0%BE%D0%B2%D0%B8-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=18652ada-bb81-4e2e-8af3-67f22f116d18',
-      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%B1%D1%80%D0%BE%D0%B2%D0%B8-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=b6dd5290-97a4-4212-b219-740c10c69056',
+      ellipse:
+        'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%B1%D1%80%D0%BE%D0%B2%D0%B8-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=18652ada-bb81-4e2e-8af3-67f22f116d18',
+      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%B1%D1%80%D0%BE%D0%B2%D0%B8-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=b6dd5290-97a4-4212-b219-740c10c69056'
     }
   }
 } satisfies TypePrice;
 
-export type TypeKeyPrice = keyof typeof $PRICE
+export type TypeKeyPrice = keyof typeof $PRICE;
 
+export const $REVIEWS = [
+  {
+    author: 'Ольга Григорьева',
+    date: '6 мая',
+    review:
+      'Моя любимая студия! Удобное месторасположение, в 5 минутах от метро Чернышевская. Приятная атмосфера, все девочки очень профессиональные мастера своего дела! Очень приветливый администратор, хорошие фильмы и вкусный кофе!'
+  },
+  {
+    author: 'Ирина',
+    date: '9 января',
+    review:
+      'Любимый салон, не изменяю больше двух лет. Прекрасные мастера, здесь можно записаться к любому и не прогадаешь. Чаще всего хожу к Марине, но к ней нужно записываться сильно заранее :) В салоне большой выбор цветов марок Luxio и ONIQ, качественное покрытие — носится без сколов до снятия, при тебе проводится стерилизация инструментов, доброжелательное обслуживание, бесплатное снятие своего покрытия, вкусный кофе, отличное расположение. Единственный минус, много желающих и сложно попасть близко к дате. Но можно попасть на окошко через инстаграм. Спасибо создателям и мастерам за такое душевное, атмосферное, уютное место. На Петроградской тоже замечательный филиал, кстати, но центральный успел стать родным❤️'
+  }
+] satisfies TypeReview[];

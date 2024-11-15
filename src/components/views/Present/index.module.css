@@ -1,75 +1,80 @@
 .present {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin: 0 0 60px 0;
 }
 .image {
-    width: 47.6%;
+  width: 47.6%;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 .title {
-    text-align: center;
-    font-family: var(--ff-cormorant-g);
-    font-size: var(--fz-headline-2);
-    font-weight: 400;
-    line-height: var(--line-height);   
+  text-align: center;
+  font-family: var(--ff-cormorant-g);
+  font-size: var(--fz-headline-2);
+  font-weight: 400;
+  line-height: var(--line-height);
 }
-.text { 
-    text-align: center;
-    white-space: pre-line;
+.text {
+  text-align: center;
+  white-space: pre-line;
 }
 
 .more {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 .more > a:last-child {
-    text-decoration-line: underline;
-    text-decoration-skip-ink: none;
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
 }
 
 @media screen and (min-width: 768px) {
-    .present, .more {
-        flex-direction: row;
-        align-items: center;
-        gap: 25px;
-    }
-    .present {
-        gap: 60px;
-    }
-    .image {
-        width: auto;
-        flex: 1 0 min(38.4%, 417px);
-    }
-    .info {
-        align-items: baseline;
-        flex: 0 1 auto;
-    }
-    .title, .text {
-        text-align: left;
-    }
-    .text {
-        line-height: 150%;
-    }
+  .present,
+  .more {
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
+  .present {
+    gap: 60px;
+    margin: 0 0 100px 0;
+  }
+  .image {
+    width: auto;
+    flex: 1 0 min(38.4%, 417px);
+  }
+  .info {
+    align-items: baseline;
+    flex: 0 1 auto;
+  }
+  .title,
+  .text {
+    text-align: left;
+  }
+  .text {
+    line-height: 150%;
+  }
 }
 
 @media screen and (min-width: 1441px) {
-    .info {
-        gap: 50px;
-    }
-    .present {
-        gap: 185px;
-    }
-    .text {
-        width: 90%;
-    }
+  .info {
+    gap: 50px;
+  }
+  .present {
+    gap: 185px;
+    margin: 0 0 200px 0;
+  }
+  .text {
+    width: 90%;
+  }
 }

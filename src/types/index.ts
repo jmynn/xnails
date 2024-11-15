@@ -35,3 +35,9 @@ export type TypePriceSection = {
 export type TypePrice = {
   [key: string]: TypePriceSection;
 };
+
+export type TypeReview = {
+  author: string;
+  review: string;
+  date: `${number} ${string}`;
+};
