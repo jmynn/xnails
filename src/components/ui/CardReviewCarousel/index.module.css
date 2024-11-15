@@ -9,6 +9,9 @@
   align-items: flex-start;
   gap: 10px;
 }
+.top > svg {
+  width: 16px;
+}
 
 .info {
   display: flex;
@@ -29,6 +32,9 @@
   display: flex;
   align-items: center;
 }
+.rate > svg {
+  width: 12px;
+}
 
 .bottom {
   display: flex;
@@ -48,4 +54,48 @@
 .text {
   overflow: hidden;
   text-wrap: balance;
+}
+
+@media screen and (min-width: 768px) {
+  .top > a {
+    display: block;
+    margin: 0 0 0 auto;
+  }
+  .top > svg {
+    width: 31px;
+  }
+  .rate > svg {
+    width: 17px;
+  }
+  .top,
+  .info {
+    gap: 15px;
+  }
+  .arrow {
+    flex: 0 0 13px;
+  }
+  .bottom {
+    gap: 30px;
+  }
+  .text {
+    line-height: 130%;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .top {
+    gap: 30px;
+  }
+  .top > svg {
+    width: 41px;
+  }
+  .bottom {
+    gap: 50px;
+  }
+  .arrow {
+    flex: 0 0 17px;
+  }
+  .text {
+    line-height: 150%;
+  }
 }
