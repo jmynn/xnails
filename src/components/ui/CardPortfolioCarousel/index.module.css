@@ -1,0 +1,35 @@
+.item {
+  flex: 0 0 calc(50% - 9px);
+  overflow: hidden;
+}
+
+.item._round {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  margin: auto 0 0 0;
+  font-family: var(--ff-cormorant-g);
+  font-size: var(--fz-text-medium);
+  font-weight: 400;
+  line-height: var(--line-height);
+  text-align: center;
+  white-space: pre-line;
+}
+.text > span {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    flex: 0 0 calc(28.271% - 11px);
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .item {
+    flex: 0 0 calc(27.015% - 15px);
+  }
+}

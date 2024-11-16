@@ -1,0 +1,19 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 0 40px 0;
+}
+.title {
+  font-family: var(--ff-cormorant-g);
+  font-size: var(--fz-headline-2);
+  font-weight: 400;
+  line-height: var(--line-height);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio {
+    margin: 0 0 100px 0;
+  }
+}

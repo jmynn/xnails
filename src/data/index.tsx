@@ -317,3 +317,14 @@ export const $INFO_STUDIOS = [
     map: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fmap%2F%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D0%BA%D0%B0.png?alt=media&token=56070de6-2d9b-4e8a-858d-a467c605066b'
   }
 ] satisfies TypeStudioInfo[];
+
+export const $PORTFOLIO_URL = [
+  'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F5.jfif?alt=media&token=67d9eadc-be96-42d4-9358-d6b339a87a9f',
+  'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F2%20foto.png?alt=media&token=2cfe41f9-6c43-41a3-8cad-87ffef60262f',
+  'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F7.jfif?alt=media&token=6b8398a6-0614-4283-acf0-e56c2181d89d',
+  'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F8.jfif?alt=media&token=6d9d9827-de27-4e90-8209-a8f37d104e4d',
+  'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F1.jfif?alt=media&token=75049188-5741-4d97-9e7c-f2e646dcc8cc',
+  'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F2.jfif?alt=media&token=0f9cb230-df2d-4a13-994d-e4ed56b7146f',
+  'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F3.jfif?alt=media&token=4c1de1e4-4611-4f4c-b2ef-7aee458b556e',
+  'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F4.jfif?alt=media&token=6850b9a1-4c9b-4179-9903-d7f348107303'
+];
