@@ -41,3 +41,14 @@ export type TypeReview = {
   review: string;
   date: `${number} ${string}`;
 };
+
+export type TypeStudioInfo = {
+  _title: string;
+  _id: `${number}-xnails`;
+  description: string;
+  phone: `+7 ${number} ${number} ${number}-${number}`;
+  title: string;
+  address: string;
+  schedule: 'Пн. — Вс.:10:00 — 22:00';
+  map: `https://${string}`;
+};

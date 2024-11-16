@@ -1,0 +1,41 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+.address {
+  white-space: pre-line;
+}
+
+@media screen and (min-width: 768px) {
+  .info {
+    flex-direction: row;
+    gap: 30px;
+    align-items: stretch;
+  }
+  .body {
+    order: 2;
+    text-align: left;
+    gap: 30px;
+    align-items: baseline;
+  }
+  .body > * {
+    line-height: 130%;
+  }
+  .map {
+    order: 1;
+    flex: 0 0 48.384%;
+    display: flex;
+    align-items: center;
+  }
+  .map > img {
+    height: min(100%, 332px);
+  }
+}

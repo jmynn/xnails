@@ -4,6 +4,7 @@ import Present from '@/components/views/Present';
 import Price from '@/components/views/Price';
 import Promo from '@/components/views/Promo';
 import Reviews from '@/components/views/Reviews';
+import Studios from '@/components/views/Studios';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       {/* portfolio */}
       <Present />
       <Reviews />
+      <Studios />
     </>
   );
 }

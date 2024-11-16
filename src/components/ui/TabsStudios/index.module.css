@@ -1,0 +1,25 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tabs > *._active::after {
+  background-color: rgba(157, 165, 124, 1);
+  transition: var(--transition);
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .tabs {
+    gap: 80px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .tabs {
+    gap: 100px;
+  }
+}

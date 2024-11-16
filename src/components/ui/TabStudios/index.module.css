@@ -1,0 +1,20 @@
+.tab {
+  font-family: var(--ff-cormorant-g);
+  font-size: var(--fz-text-medium);
+  font-weight: 400;
+  line-height: var(--line-height);
+  position: relative;
+  padding: 5px 0;
+}
+
+.tab::after {
+  content: '';
+  width: 100%;
+  background-color: transparent;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: var(--transition);
+  opacity: 0;
+}

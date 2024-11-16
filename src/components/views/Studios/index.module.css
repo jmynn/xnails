@@ -1,0 +1,20 @@
+.studios {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin: 0 0 40px 0;
+}
+.title {
+  font-size: var(--fz-headline-2);
+  font-family: var(--ff-cormorant-g);
+  font-weight: 400;
+  line-height: var(--line-height);
+}
+
+@media screen and (min-width: 768px) {
+  .studios {
+    gap: 30px;
+    margin: 0 0 100px 0;
+  }
+}
