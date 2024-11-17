@@ -2,13 +2,14 @@ import {
   TypeNavbarLinks,
   TypePrice,
   TypePromoCard,
+  TypeReadonlyData,
   TypeReview,
   TypeStudioInfo
 } from '@/types';
 
 const $BASEPATH = '';
 
-export const $NAVBAR_LINKS = {
+export const $NAVBAR_LINKS: TypeReadonlyData<TypeNavbarLinks, 'object'> = {
   desktop: [
     {
       href: '/',
@@ -61,7 +62,7 @@ export const $NAVBAR_LINKS = {
       label: 'блог'
     }
   ]
-} satisfies TypeNavbarLinks;
+};
 
 export const $CONTACT_NUMBER = '+7 (812) 660-50-88';
 
@@ -70,6 +71,8 @@ export const $PATH_PRIVACY_POLICY = '/';
 export const $PATH_PRESENT_MORE = '/';
 export const $PATH_REVIEW = '/';
 
+export const $VISIBLE_REVIEW_STRING = 6;
+
 export const $MAIN_PAGE_PICS = {
   main: `${$BASEPATH}/main/main-img.webp`,
   other: [
@@ -77,9 +80,9 @@ export const $MAIN_PAGE_PICS = {
     `${$BASEPATH}/main/main-center.webp`,
     `${$BASEPATH}/main/main-right.webp`
   ]
-};
+} as const;
 
-export const $FOOTER_LINKS = {
+export const $FOOTER_LINKS: TypeReadonlyData<TypeNavbarLinks, 'object'> = {
   mobile: [
     {
       href: '/',
@@ -136,9 +139,9 @@ export const $FOOTER_LINKS = {
       label: 'студии'
     }
   ]
-} satisfies TypeNavbarLinks;
+};
 
-export const $PROMO_CARDS = [
+export const $PROMO_CARDS: TypeReadonlyData<TypePromoCard, 'array'> = [
   {
     src: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fcarousel_1%2Fcarousel-1.png?alt=media&token=c6f078eb-023c-4b04-a5f3-f7a0418e3972',
     title: 'Вместе дешевле!',
@@ -161,9 +164,9 @@ export const $PROMO_CARDS = [
       objectFit: 'cover'
     }
   }
-] satisfies TypePromoCard[];
+];
 
-export const $PRICE = {
+export const $PRICE: TypeReadonlyData<TypePrice, 'object'> = {
   nail: {
     title: 'Маникюр',
     id: 'nail',
@@ -272,11 +275,11 @@ export const $PRICE = {
       half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%B1%D1%80%D0%BE%D0%B2%D0%B8-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=b6dd5290-97a4-4212-b219-740c10c69056'
     }
   }
-} satisfies TypePrice;
+};
 
 export type TypeKeyPrice = keyof typeof $PRICE;
 
-export const $REVIEWS = [
+export const $REVIEWS: TypeReadonlyData<TypeReview, 'array'> = [
   {
     author: 'Ольга Григорьева',
     date: '6 мая',
@@ -289,11 +292,9 @@ export const $REVIEWS = [
     review:
       'Любимый салон, не изменяю больше двух лет. Прекрасные мастера, здесь можно записаться к любому и не прогадаешь. Чаще всего хожу к Марине, но к ней нужно записываться сильно заранее :) В салоне большой выбор цветов марок Luxio и ONIQ, качественное покрытие — носится без сколов до снятия, при тебе проводится стерилизация инструментов, доброжелательное обслуживание, бесплатное снятие своего покрытия, вкусный кофе, отличное расположение. Единственный минус, много желающих и сложно попасть близко к дате. Но можно попасть на окошко через инстаграм. Спасибо создателям и мастерам за такое душевное, атмосферное, уютное место. На Петроградской тоже замечательный филиал, кстати, но центральный успел стать родным❤️'
   }
-] satisfies TypeReview[];
+];
 
-export const $VISIBLE_REVIEW_STRING = 6;
-
-export const $INFO_STUDIOS = [
+export const $INFO_STUDIOS: TypeReadonlyData<TypeStudioInfo, 'array'> = [
   {
     _title: 'Xnails Центр',
     _id: `${0}-xnails`,
@@ -316,9 +317,9 @@ export const $INFO_STUDIOS = [
     schedule: 'Пн. — Вс.:10:00 — 22:00',
     map: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fmap%2F%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D0%BA%D0%B0.png?alt=media&token=56070de6-2d9b-4e8a-858d-a467c605066b'
   }
-] satisfies TypeStudioInfo[];
+];
 
-export const $PORTFOLIO_URL = [
+export const $PORTFOLIO_URL: TypeReadonlyData<string, 'array'> = [
   'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F5.jfif?alt=media&token=67d9eadc-be96-42d4-9358-d6b339a87a9f',
   'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F2%20foto.png?alt=media&token=2cfe41f9-6c43-41a3-8cad-87ffef60262f',
   'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F7.jfif?alt=media&token=6b8398a6-0614-4283-acf0-e56c2181d89d',

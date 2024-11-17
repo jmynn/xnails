@@ -52,3 +52,8 @@ export type TypeStudioInfo = {
   schedule: 'Пн. — Вс.:10:00 — 22:00';
   map: `https://${string}`;
 };
+
+export type TypeReadonlyData<
+  T,
+  R extends 'array' | 'object'
+> = R extends 'array' ? readonly Readonly<T>[] : Readonly<T>;
