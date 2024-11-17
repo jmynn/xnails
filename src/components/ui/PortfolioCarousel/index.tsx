@@ -4,7 +4,7 @@ import {
   ReactNode,
   useCallback,
   useContext,
-  useLayoutEffect,
+  useEffect,
   useMemo,
   useRef,
   useState
@@ -13,6 +13,7 @@ import styles from './index.module.css';
 import CardPortfolioCarousel from '../CardPortfolioCarousel';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import IconArrowCarousel from '../Icons/IconArrowCarousel';
+import calcValueTranslate from '@/services/calcValueTranslate';
 
 const PortfolioCarousel = (): ReactNode => {
   const { urls } = useContext(PortfolioContext);
@@ -62,29 +63,26 @@ const PortfolioCarousel = (): ReactNode => {
         onClick={() => handleCurrentPosition(i)}
       />
     ));
-  }, [urls, currentPositionCarousel, countDots]);
+  }, [urls, currentPositionCarousel, countDots, handleCurrentPosition]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!carouselRef.current) return;
     if (currentPositionCarousel === 0) {
       carouselRef.current.style.translate = `0 0`;
       return;
     }
-    const el = carouselRef.current;
-    const widthContainer = el.offsetWidth;
-    const widthChild = +window
-      .getComputedStyle(el.children[0])
-      .width.split('px')[0];
-    const gapCarousel = +window.getComputedStyle(el).gap.split('px')[0];
-    const gap =
-      currentPositionCarousel === 1 ? gapCarousel * 3 : gapCarousel * 2;
-    const calcWidthChildWithGap = widthChild + gap;
-    const percentTranslate =
-      Math.round((calcWidthChildWithGap / widthContainer) * 100 * -1) *
-      currentPositionCarousel;
-
-    carouselRef.current.style.translate = `${percentTranslate}% 0`;
-  }, [currentPositionCarousel]);
+    if (!isTablet && !isLarge && currentPositionCarousel !== 0) {
+      carouselRef.current.style.translate = `0 0`;
+      setCurrentPositionCarousel(0);
+      return;
+    }
+    const positionX = calcValueTranslate(
+      carouselRef.current,
+      isLarge,
+      currentPositionCarousel
+    );
+    carouselRef.current.style.translate = `${positionX}% 0`;
+  }, [isTablet, isLarge, currentPositionCarousel]);
 
   return (
     <div className={styles.section}>

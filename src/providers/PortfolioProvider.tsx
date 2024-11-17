@@ -18,7 +18,11 @@ type Context = {
   countPic: number;
 };
 
-const COUNT_PIC = 4;
+const COUNT_PIC = {
+  MOBILE: 4,
+  TABLET: 7,
+  LAPTOP: 8
+} as const;
 export const PortfolioContext = createContext<Context>({} as Context);
 
 const PortfolioProvider: FunctionComponent<Props> = ({
@@ -26,7 +30,7 @@ const PortfolioProvider: FunctionComponent<Props> = ({
 }): ReactNode => {
   const isTablet = useMediaQuery('(min-width: 768px)');
   const isLarge = useMediaQuery('(min-width: 1441px)');
-  const [countPic, setCountPic] = useState<number>(COUNT_PIC);
+  const [countPic, setCountPic] = useState<number>(COUNT_PIC.MOBILE);
   const urls = useMemo(() => {
     if (countPic > $PORTFOLIO_URL.length || countPic < 0) return null;
     const slicedUrls = $PORTFOLIO_URL.slice(0, countPic);
@@ -34,12 +38,16 @@ const PortfolioProvider: FunctionComponent<Props> = ({
   }, [countPic]);
 
   useEffect(() => {
+    if (!isTablet && !isLarge) {
+      setCountPic(COUNT_PIC.MOBILE);
+      return;
+    }
     if (isTablet && !isLarge) {
-      setCountPic(7);
+      setCountPic(COUNT_PIC.TABLET);
       return;
     }
     if (isLarge) {
-      setCountPic(8);
+      setCountPic(COUNT_PIC.LAPTOP);
       return;
     }
   }, [isTablet, isLarge]);
