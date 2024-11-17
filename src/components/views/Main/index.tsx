@@ -6,6 +6,7 @@ import Image from 'next/image';
 import InfoBlock from '@/components/ui/InfoBlock';
 import MainLinks from '@/components/ui/MainLinks';
 import useMediaQuery from '@/hooks/useMediaQuery';
+import Blob from '@/components/ui/Blob';
 
 const aboutInfo = [
   {
@@ -27,7 +28,9 @@ const Main = (): ReactNode => {
   return (
     <main className={styles.main}>
       <div className={styles.top}>
-        <h2 className={styles.subtitle}>{`XNAILS - студии маникюра\n в Санкт-Петербурге`}</h2>
+        <h2
+          className={styles.subtitle}
+        >{`XNAILS - студии маникюра\n в Санкт-Петербурге`}</h2>
         <h1 className={styles.title}>
           <span>Мы знаем все о</span> красивом{'\n'}
           <span>и</span> качественном{'\n'}
@@ -71,6 +74,8 @@ const Main = (): ReactNode => {
           ))}
         </div>
       </div>
+      <Blob className={styles._b1} />
+      <Blob className={styles._b2} />
     </main>
   );
 };

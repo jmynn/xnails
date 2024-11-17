@@ -21,7 +21,7 @@
   --btn-hover: var(--color-primary);
 
   --blob-size: 100px;
-  --blob-blur: blur(80px);
+  --blob-blur: blur(50px);
 
   /* 300, 400 */
   --ff-cormorant-sc: 'Cormorant SC', serif;
@@ -49,7 +49,7 @@
     --btn-p: 10px 20px;
 
     --blob-size: 199px;
-    --blob-blur: blur(170px);
+    --blob-blur: blur(90px);
   }
 }
 
@@ -68,7 +68,7 @@
     --btn-fz: 18px;
 
     --blob-size: 335px;
-    --blob-blur: blur(250px);
+    --blob-blur: blur(200px);
   }
 }
 

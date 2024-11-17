@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 import ButtonSignUp from '@/components/ui/ButtonSignUp';
 import Link from 'next/link';
 import { $PATH_PRESENT_MORE } from '@/data';
+import Blob from '@/components/ui/Blob';
 
 const Present = (): ReactNode => {
   return (
@@ -40,6 +41,7 @@ const Present = (): ReactNode => {
           </Link>
         </div>
       </div>
+      <Blob className={styles._b4} />
     </div>
   );
 };

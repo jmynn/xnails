@@ -1,84 +1,91 @@
 .items {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .item > * {
-    font-weight: 300;
-    line-height: var(--line-height);
+  font-weight: 300;
+  line-height: var(--line-height);
 }
 
 .label {
-    flex: 0 1 auto;
-    white-space: pre-line;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  flex: 0 1 auto;
+  white-space: pre-line;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .value {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 .items > a {
-    margin: 30px auto 0;
+  margin: 30px auto 0;
+}
+._b5 {
+  right: calc((100vw - var(--container)) / 2 * -1);
+  bottom: 20%;
 }
 
 @media screen and (min-width: 768px) {
-    .items {
-        gap: 15px;
-        flex: 0 0 51.34%;
-    }
-    .items > a {
-        margin: 40px 0 0;
-    }
-    .section {
-        display: flex;
-        gap: 30px;
-    }
-    .pictures {
-        flex: 1 0 44.44%;
-        display: flex;
-        position: relative;
-    }
-    .ellipse {
-        translate: 0 60px;
-    }
-    .half {
-        z-index: -1;
-        position: absolute;
-        left: 54%;
-        border-top-left-radius: 50%;
-        top: -5%;
-        aspect-ratio: 1 / 1.24;
-    }
-    .nail, .pedicure {
-        scale: -1 1;
-        border-top-right-radius: 50%;
-        border-top-left-radius: 0;
-    }
+  .items {
+    gap: 15px;
+    flex: 0 0 51.34%;
+  }
+  .items > a {
+    margin: 40px 0 0;
+  }
+  .section {
+    display: flex;
+    gap: 30px;
+  }
+  .pictures {
+    flex: 1 0 44.44%;
+    display: flex;
+    position: relative;
+  }
+  .ellipse {
+    translate: 0 60px;
+  }
+  .half {
+    z-index: -1;
+    position: absolute;
+    left: 54%;
+    border-top-left-radius: 50%;
+    top: -5%;
+    aspect-ratio: 1 / 1.24;
+  }
+  .nail,
+  .pedicure {
+    scale: -1 1;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 0;
+  }
 }
 
-
 @media screen and (min-width: 1441px) {
-    .half {
-        right: 0;
-        left: auto;
-        top: -80px;
-    }
-    .items {
-        flex: 0 0 48.76%;
-        gap: 10px;
-    }
-    .pictures {
-        flex: 0 0 39.95%;
-    }
-    .section {
-        justify-content: space-between;
-    }
+  .half {
+    right: 0;
+    left: auto;
+    top: -80px;
+  }
+  .items {
+    flex: 0 0 48.76%;
+    gap: 10px;
+  }
+  .pictures {
+    flex: 0 0 39.95%;
+  }
+  .section {
+    justify-content: space-between;
+  }
+  ._b5 {
+    right: 0;
+  }
 }

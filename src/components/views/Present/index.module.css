@@ -4,6 +4,11 @@
   gap: 20px;
   align-items: center;
   margin: 0 0 60px 0;
+  position: relative;
+}
+._b4 {
+  right: calc((100vw - var(--container)) / 2 * -1);
+  top: 40%;
 }
 .image {
   width: 47.6%;
@@ -76,5 +81,8 @@
   }
   .text {
     width: 90%;
+  }
+  ._b4 {
+    right: 0;
   }
 }
