@@ -5,6 +5,7 @@ import ButtonSignUp from '@/components/ui/ButtonSignUp';
 import Link from 'next/link';
 import { $PATH_PRESENT_MORE } from '@/data';
 import Blob from '@/components/ui/Blob';
+import Headline from '@/components/ui/Headline';
 
 const Present = (): ReactNode => {
   return (
@@ -26,7 +27,7 @@ const Present = (): ReactNode => {
         />
       </div>
       <div className={styles.info}>
-        <h2 className={styles.title}>Не знаете, что подарить?</h2>
+        <Headline className={styles.title}>Не знаете, что подарить?</Headline>
         <div className={styles.text}>
           Подарочный сертификат – это приятный сюрприз для Ваших близких и
           идеальный подарок коллеге, который обязательно порадует и подарит

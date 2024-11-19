@@ -14,10 +14,10 @@ const SectionStudios = (): ReactNode => {
     [currentTab]
   );
   return (
-    <div className={styles.info}>
+    <div className={styles.info} key={currentTab}>
       <div className={styles.body}>
         <div className={styles.description}>{description}</div>
-        <Link href={`tel:${phone}`} className={styles.phone + ' _transition'}>
+        <Link href={`tel:${phone}`} className={'_transition'}>
           {phone}
         </Link>
         <div className={styles.address}>

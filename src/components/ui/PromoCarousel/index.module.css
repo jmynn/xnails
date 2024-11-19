@@ -1,51 +1,92 @@
 .carousel {
   translate: calc((100vw - var(--container)) / 2 * -1) 0;
   margin: 0 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .cards {
   display: flex;
-  animation-name: slider;
-  animation-duration: 15s;
-  animation-delay: 0ms;
-  animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
+  transition: var(--transition);
 }
 
-.cards > *:last-child > *:has(img) > img {
-  scale: 2;
-  translate: 30% -25%;
+.dots {
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  translate: calc((100vw - var(--container)) / 2) 0;
 }
-
-@keyframes slider {
-  0%,
-  49% {
-    translate: 0;
-  }
-  55%,
-  94% {
-    translate: -100vw 0;
+.dot {
+  width: 8px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 0.5px solid var(--color-black);
+}
+.dot._active {
+  background-color: var(--color-primary);
+  border: none;
+}
+@keyframes visible {
+  0% {
+    opacity: 0;
   }
   100% {
-    translate: 0;
+    opacity: 1;
   }
+}
+._promo_0,
+._promo_1 {
+  transition: var(--transition);
+  animation-name: visible;
+  animation-duration: 0.3s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .cards > *:last-child > * * {
-    color: var(--color-white);
-    text-align: center;
-  }
-
-  .cards > *:first-child > *:not(:has(img)) {
+  ._promo_0 > *:not(:has(img)) {
     width: 53.78%;
   }
-  .cards > *:last-child > *:not(:has(img)) {
+  ._promo_1 > *:not(:has(img)) {
     width: 46.09%;
   }
 
-  .cards > *:last-child > *:has(img) > img {
-    translate: 30% -53%;
+  ._promo_1 > *:has(img) > img {
+    scale: 1.7;
+    translate: 20% -43%;
+    position: relative;
+  }
+  ._promo_1 > *:has(img) {
+    position: relative;
+  }
+  ._promo_1 > *:has(img)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0.22;
+    top: 0;
+    left: 0;
+  }
+
+  .dot {
+    width: 13px;
+  }
+  .dots {
+    gap: 10px;
+  }
+  .carousel {
+    gap: 25px;
+  }
+  .cards > ._promo_1 > *:not(:has(img)) * {
+    color: var(--color-white);
+    text-align: center;
   }
 }
 
@@ -53,23 +94,13 @@
   .carousel {
     translate: 0;
     overflow: hidden;
+    gap: 50px;
   }
-
-  .cards > *:last-child > *:has(img) > img {
+  .dots {
+    translate: 0;
+  }
+  ._promo_1 > *:has(img) > img {
     translate: 0% -40%;
     scale: 1.2;
-  }
-  @keyframes slider {
-    0%,
-    49% {
-      translate: 0;
-    }
-    55%,
-    94% {
-      translate: -100% 0;
-    }
-    100% {
-      translate: 0;
-    }
   }
 }

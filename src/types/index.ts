@@ -16,6 +16,7 @@ export type TypePromoCard = {
     height: string;
     objectFit: 'cover';
   };
+  className?: string;
 };
 
 export type TypePriceItem = {

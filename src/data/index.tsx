@@ -143,7 +143,7 @@ export const $FOOTER_LINKS: TypeReadonlyData<TypeNavbarLinks, 'object'> = {
 
 export const $PROMO_CARDS: TypeReadonlyData<TypePromoCard, 'array'> = [
   {
-    src: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fcarousel_1%2Fcarousel-1.png?alt=media&token=c6f078eb-023c-4b04-a5f3-f7a0418e3972',
+    src: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fcarousel_1%2F640480fda372ac233e225d79376ff2ed.jfif?alt=media&token=afa104fd-95ed-4194-805d-7826114340c3',
     title: 'Вместе дешевле!',
     text: `Расскажите о нас своим подругам, знакомым, коллегам или родственникам.\n Друг получает скидку 10% на первый визит, а вы - 10% кэшбэк с его первого визита`,
     link: '/',
@@ -151,7 +151,8 @@ export const $PROMO_CARDS: TypeReadonlyData<TypePromoCard, 'array'> = [
       width: '100%',
       height: '100%',
       objectFit: 'cover'
-    }
+    },
+    className: '_promo_0'
   },
   {
     // src: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fcarousel_1%2Fcarousel-2.png?alt=media&token=a8039d15-4c42-4a90-9670-b35ef6c7d1df',
@@ -162,7 +163,8 @@ export const $PROMO_CARDS: TypeReadonlyData<TypePromoCard, 'array'> = [
       width: '100%',
       height: 'auto',
       objectFit: 'cover'
-    }
+    },
+    className: '_promo_1'
   }
 ];
 

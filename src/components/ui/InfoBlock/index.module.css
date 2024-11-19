@@ -1,19 +1,12 @@
 .block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-.title {
-    font-size: var(--fz-headline-2);
-    font-family: var(--ff-cormorant-g);
-    font-weight: 400;
-    line-height: var(--line-height);
-    white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 .subtitle {
-    text-align: center;
-    font-weight: 300;
-    line-height: 130%;
-    white-space: pre-line;
+  text-align: center;
+  font-weight: 300;
+  line-height: 130%;
+  white-space: pre-line;
 }

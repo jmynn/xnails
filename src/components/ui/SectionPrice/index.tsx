@@ -12,10 +12,14 @@ const SectionPrice = (): ReactNode => {
   const { activeTab } = useContext(PriceContext);
   const isLarge = useMediaQuery('(min-width: 768px)');
   return (
-    <div className={styles.section}>
+    <div className={styles.section} key={activeTab}>
       <div className={styles.items}>
         {$PRICE[activeTab].items.map((item, i) => (
-          <div className={styles.item} key={i}>
+          <div
+            className={styles.item}
+            key={`${i}-${item.title}`}
+            style={{ animationDelay: `${0.1 * i}s` }}
+          >
             <div className={styles.label}>{item.title}</div>
             <div className={styles.value}>{item.cost}</div>
           </div>

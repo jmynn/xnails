@@ -22,10 +22,6 @@
 }
 .title {
   text-align: center;
-  font-family: var(--ff-cormorant-g);
-  font-size: var(--fz-headline-2);
-  font-weight: 400;
-  line-height: var(--line-height);
 }
 .text {
   text-align: center;

@@ -5,13 +5,6 @@
   margin: 0 0 60px 0;
   position: relative;
 }
-.title {
-  font-family: var(--ff-cormorant-g);
-  font-size: var(--fz-headline-2);
-  font-weight: 400;
-  line-height: var(--line-height);
-  text-align: center;
-}
 
 ._b3 {
   left: calc((100vw - var(--container)) / 2 * -1);

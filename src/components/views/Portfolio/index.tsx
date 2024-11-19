@@ -2,11 +2,12 @@ import PortfolioCarousel from '@/components/ui/PortfolioCarousel';
 import PortfolioProvider from '@/providers/PortfolioProvider';
 import { ReactNode } from 'react';
 import styles from './index.module.css';
+import Headline from '@/components/ui/Headline';
 
 const Portfolio = (): ReactNode => {
   return (
     <div className={styles.portfolio}>
-      <h2 className={styles.title}>Портфолио</h2>
+      <Headline style={{ textAlign: 'center' }}>Портфолио</Headline>
       <PortfolioProvider>
         <PortfolioCarousel />
       </PortfolioProvider>

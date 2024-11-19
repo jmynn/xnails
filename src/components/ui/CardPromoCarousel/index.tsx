@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FunctionComponent } from 'react';
 import styles from './index.module.css';
+import Headline from '../Headline';
 
 type Props = TypePromoCard & {
   width: number;
@@ -16,10 +17,11 @@ const CardPromoCarousel: FunctionComponent<Props> = ({
   title,
   width,
   text,
-  style
+  style,
+  className
 }) => {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${className}`}>
       <div className={styles.image}>
         <Image
           width={width}
@@ -27,11 +29,11 @@ const CardPromoCarousel: FunctionComponent<Props> = ({
           src={src}
           alt="carousel card pic"
           style={style}
-          sizes='100vw'
+          sizes="100vw"
         />
       </div>
       <div className={styles.info}>
-        <div className={styles.title}>{title}</div>
+        <Headline className={styles.title}>{title}</Headline>
         {text && <div className={styles.text}>{text}</div>}
         <Link className={styles.more + ' _transition'} href={link}>
           Подробнее

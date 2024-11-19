@@ -4,11 +4,12 @@ import TabsPrice from '@/components/ui/TabsPrice';
 import PriceProvider from '@/providers/PriceProvider';
 import SectionPrice from '@/components/ui/SectionPrice';
 import Blob from '@/components/ui/Blob';
+import Headline from '@/components/ui/Headline';
 
 const Price = (): ReactNode => {
   return (
     <div className={styles.price}>
-      <h2 className={styles.title}>Наши услуги</h2>
+      <Headline style={{ textAlign: 'center' }}>Наши услуги</Headline>
       <PriceProvider>
         <TabsPrice />
         <SectionPrice />

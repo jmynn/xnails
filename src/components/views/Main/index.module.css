@@ -92,6 +92,7 @@
   .subtitle {
     margin: 0;
     white-space: normal;
+    margin: 0 0 -15px 0;
   }
   .pictures {
     translate: 0 -215px;

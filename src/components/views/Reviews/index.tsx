@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 import Image from 'next/image';
 import ReviewsCarousel from '@/components/ui/ReviewsCarousel';
 import LinkReview from '@/components/ui/LinkReview';
+import Headline from '@/components/ui/Headline';
 
 const Reviews = (): ReactNode => {
   const isLarge = useMediaQuery('(min-width: 768px)');
@@ -12,12 +13,12 @@ const Reviews = (): ReactNode => {
     <div className={styles.reviews}>
       <div className={styles.top}>
         <div className={styles.info}>
-          <h2 className={styles.title}>
+          <Headline className={styles.title}>
             <span>Мы</span> заботимся{'\n'} <span>о наших</span> клиентах{'\n'}{' '}
             <span className={styles._offset}>
               <span>и они</span> это ценят
             </span>
-          </h2>
+          </Headline>
           {!isLarge && <LinkReview />}
           {isLarge && <ReviewsCarousel />}
         </div>

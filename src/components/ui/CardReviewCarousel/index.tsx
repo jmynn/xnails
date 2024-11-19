@@ -85,7 +85,7 @@ const CardReviewCarousel: FunctionComponent<Props> = ({
         >
           <IconArrowCarousel direction="left" />
         </div>
-        <div className={styles.review}>
+        <div>
           <div className={styles.text} ref={reviewRef} id="test">
             {review}
           </div>

@@ -3,11 +3,12 @@ import { ReactNode } from 'react';
 import TabsStudios from '@/components/ui/TabsStudios';
 import SectionStudios from '@/components/ui/SectionStudios';
 import StudioProvider from '@/providers/StudioProvider';
+import Headline from '@/components/ui/Headline';
 
 const Studios = (): ReactNode => {
   return (
     <div className={styles.studios}>
-      <h2 className={styles.title}>Наши студии</h2>
+      <Headline>Наши студии</Headline>
       <StudioProvider>
         <TabsStudios />
         <SectionStudios />

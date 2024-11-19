@@ -12,6 +12,7 @@ body {
   color: var(--color-black);
   background-color: var(--color-secondary);
   line-height: var(--line-height);
+  user-select: none;
 }
 #content {
   flex: 1 1 auto;
@@ -32,3 +33,5 @@ body {
     cursor: pointer;
   }
 }
+
+

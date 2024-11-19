@@ -17,6 +17,7 @@
   .carousel {
     flex-wrap: nowrap;
     align-items: stretch;
+    transition: var(--transition);
   }
   .dots {
     display: flex;
