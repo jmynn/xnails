@@ -296,30 +296,30 @@ export const $REVIEWS: TypeReadonlyData<TypeReview, 'array'> = [
   }
 ];
 
-export const $INFO_STUDIOS: TypeReadonlyData<TypeStudioInfo, 'array'> = [
-  {
-    _title: 'Xnails Центр',
-    _id: `${0}-xnails`,
-    title: 'XNAILS Центр',
-    address: 'Гродненский переулок, д. 7\n м. Чернышевская, г. Санкт-Петербург',
-    description:
-      'Наша студия находится в Центральном районе г. Санкт-Петербург, в 5 минутах ходьбы  от станции метро «Чернышевская»',
-    phone: `+7 ${911} ${924} ${63}-${45}`,
-    schedule: 'Пн. — Вс.:10:00 — 22:00',
-    map: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fmap%2F%D1%86%D0%B5%D0%BD%D1%82%D1%80.png?alt=media&token=ced6a822-963d-439f-9e01-0dad0488cf50'
-  },
-  {
-    _title: 'Xnails Петроградка',
-    _id: `${1}-xnails`,
-    title: 'XNAILS Петроградка',
-    address: 'Ул. Зверинская, д. 12Б\n м. Спортивная, г. Санкт-Петербург',
-    description:
-      'Новая студия находится в Петроградском районе г. Санкт-Петербург, в 5 минутах ходьбы  от станции метро «Спортивная»',
-    phone: `+7 ${911} ${924} ${63}-${45}`,
-    schedule: 'Пн. — Вс.:10:00 — 22:00',
-    map: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fmap%2F%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D0%BA%D0%B0.png?alt=media&token=56070de6-2d9b-4e8a-858d-a467c605066b'
-  }
-];
+// export const $INFO_STUDIOS: TypeReadonlyData<TypeStudioInfo, 'array'> = [
+//   {
+//     _title: 'Xnails Центр',
+//     _id: `${0}-xnails`,
+//     title: 'XNAILS Центр',
+//     address: 'Гродненский переулок, д. 7\n м. Чернышевская, г. Санкт-Петербург',
+//     description:
+//       'Наша студия находится в Центральном районе г. Санкт-Петербург, в 5 минутах ходьбы  от станции метро «Чернышевская»',
+//     phone: `+7 ${911} ${924} ${63}-${45}`,
+//     schedule: 'Пн. — Вс.:10:00 — 22:00',
+//     map: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fmap%2F%D1%86%D0%B5%D0%BD%D1%82%D1%80.png?alt=media&token=ced6a822-963d-439f-9e01-0dad0488cf50'
+//   },
+//   {
+//     _title: 'Xnails Петроградка',
+//     _id: `${1}-xnails`,
+//     title: 'XNAILS Петроградка',
+//     address: 'Ул. Зверинская, д. 12Б\n м. Спортивная, г. Санкт-Петербург',
+//     description:
+//       'Новая студия находится в Петроградском районе г. Санкт-Петербург, в 5 минутах ходьбы  от станции метро «Спортивная»',
+//     phone: `+7 ${911} ${924} ${63}-${45}`,
+//     schedule: 'Пн. — Вс.:10:00 — 22:00',
+//     map: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fmap%2F%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D0%BA%D0%B0.png?alt=media&token=56070de6-2d9b-4e8a-858d-a467c605066b'
+//   }
+// ];
 
 export const $PORTFOLIO_URL: TypeReadonlyData<string, 'array'> = [
   'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F5.jfif?alt=media&token=67d9eadc-be96-42d4-9358-d6b339a87a9f',
