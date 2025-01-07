@@ -3,8 +3,15 @@ export type TypeLink = {
   label: string;
 };
 
-export type TypeNavbarLinks = Record<'desktop' | 'mobile', TypeLink[]>;
-export type TypeFooterLinks = Record<'desktop' | 'mobile', TypeLink[]>;
+export type TypeIsDesktopLink = {
+  isDesktop: boolean;
+  desktopLabel?: string;
+};
+
+export type TypeNavLinks = {
+  link: TypeLink;
+  desktop?: TypeIsDesktopLink;
+};
 
 export type TypePromoCard = {
   src: `https://${string}`;
