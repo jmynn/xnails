@@ -168,116 +168,116 @@ export const $PROMO_CARDS: TypeReadonlyData<TypePromoCard, 'array'> = [
   }
 ];
 
-export const $PRICE: TypeReadonlyData<TypePrice, 'object'> = {
-  nail: {
-    title: 'Маникюр',
-    id: 'nail',
-    items: [
-      {
-        title: 'Снятие покрытия',
-        cost: `${200} ₽`
-      },
-      {
-        title: 'Маникюр (аппаратный, комбинированный)',
-        cost: `${1000} ₽`
-      },
-      {
-        title: 'Покрытие гелем Luxio, oniq',
-        cost: `${900} ₽`
-      },
-      {
-        title: `Снятие + маникюр +\n Покрытие гелем Luxio, oniq  `,
-        cost: `${210}0 ₽`
-      },
-      {
-        title: (
-          <>
-            Дизайн ногтей{' '}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="9"
-              height="8"
-              viewBox="0 0 9 8"
-              fill="none"
-            >
-              <path
-                d="M4.55664 7.28076L0.659527 0.530761L8.45376 0.530762L4.55664 7.28076Z"
-                fill="#181818"
-              />
-            </svg>
-          </>
-        ),
-        cost: `${20}-${300} ₽`
-      },
-      {
-        title: 'Укрепление акриловой пудрой',
-        cost: `${300} ₽`
-      },
-      {
-        title: 'Укрепление гелем',
-        cost: `${500} ₽`
-      },
-      {
-        title: 'Ремонт натурального ногтя',
-        cost: `${100} ₽`
-      }
-    ],
-    images: {
-      ellipse:
-        'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=0f5dd0ff-f2af-4bb1-a2d6-1fbdb429da42',
-      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=dc0600e2-c0f0-48a0-9030-bd10297ca7dd'
-    }
-  },
-  increase: {
-    title: 'Наращивание',
-    id: 'increase',
-    items: [
-      { title: 'Снятие наращенных ногтей', cost: `${400} ₽` },
-      { title: 'Ремонт ногтя гелем', cost: `${200} ₽` },
-      { title: 'Наращивание + маникюр + покрытие', cost: `${3100} ₽` },
-      { title: 'Коррекция + маникюр + покрытие', cost: `${2700} ₽` },
-      { title: 'Донаращивание сломанного ногтя', cost: `${200} ₽` }
-    ],
-    images: {
-      ellipse:
-        'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BD%D0%B0%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=a07a6da9-4b0b-4b9b-83eb-4f168a16a303',
-      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BD%D0%B0%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=0f1133df-562e-43b5-8b42-a4f463129371'
-    }
-  },
-  pedicure: {
-    title: 'Педикюр',
-    id: 'pedicure',
-    items: [
-      { title: 'Снятие покрытия', cost: `${200} ₽` },
-      { title: 'Педюкюр', cost: `${1400} ₽` },
-      { title: 'Покрытие Luxio, ONIQ', cost: `${900} ₽` },
-      { title: 'Снятие + педикюр + покрытие', cost: `${2700} ₽` }
-    ],
-    images: {
-      ellipse:
-        'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=e5f5ea91-4b35-49bc-bedb-c1548b5143ba',
-      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=dc0600e2-c0f0-48a0-9030-bd10297ca7dd'
-    }
-  },
-  eyebrows: {
-    title: 'Брови',
-    id: 'eyebrows',
-    items: [
-      { title: 'Коррекция бровей', cost: `${600} ₽` },
-      { title: 'Окрашивание бровей краской', cost: `${900} ₽` },
-      { title: 'Окрашивание бровей хной', cost: `${900} ₽` },
-      { title: 'Коррекция и окрашивание хной /краской', cost: `${1500} ₽` },
-      { title: 'Моделирование + коррекция + окрашивание', cost: `${2000} ₽` },
-      { title: 'Ламинирование + кореекция', cost: `${2000} ₽` },
-      { title: 'Ламинирование + коррекция + окрашивание', cost: `${2300} ₽` }
-    ],
-    images: {
-      ellipse:
-        'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%B1%D1%80%D0%BE%D0%B2%D0%B8-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=18652ada-bb81-4e2e-8af3-67f22f116d18',
-      half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%B1%D1%80%D0%BE%D0%B2%D0%B8-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=b6dd5290-97a4-4212-b219-740c10c69056'
-    }
-  }
-};
+// export const $PRICE: TypeReadonlyData<TypePrice, 'object'> = {
+//   nail: {
+//     title: 'Маникюр',
+//     id: 'nail',
+//     items: [
+//       {
+//         title: 'Снятие покрытия',
+//         cost: `${200} ₽`
+//       },
+//       {
+//         title: 'Маникюр (аппаратный, комбинированный)',
+//         cost: `${1000} ₽`
+//       },
+//       {
+//         title: 'Покрытие гелем Luxio, oniq',
+//         cost: `${900} ₽`
+//       },
+//       {
+//         title: `Снятие + маникюр +\n Покрытие гелем Luxio, oniq  `,
+//         cost: `${210}0 ₽`
+//       },
+//       {
+//         title: (
+//           <>
+//             Дизайн ногтей{' '}
+//             <svg
+//               xmlns="http://www.w3.org/2000/svg"
+//               width="9"
+//               height="8"
+//               viewBox="0 0 9 8"
+//               fill="none"
+//             >
+//               <path
+//                 d="M4.55664 7.28076L0.659527 0.530761L8.45376 0.530762L4.55664 7.28076Z"
+//                 fill="#181818"
+//               />
+//             </svg>
+//           </>
+//         ),
+//         cost: `${20}-${300} ₽`
+//       },
+//       {
+//         title: 'Укрепление акриловой пудрой',
+//         cost: `${300} ₽`
+//       },
+//       {
+//         title: 'Укрепление гелем',
+//         cost: `${500} ₽`
+//       },
+//       {
+//         title: 'Ремонт натурального ногтя',
+//         cost: `${100} ₽`
+//       }
+//     ],
+//     images: {
+//       ellipse:
+//         'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=0f5dd0ff-f2af-4bb1-a2d6-1fbdb429da42',
+//       half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=dc0600e2-c0f0-48a0-9030-bd10297ca7dd'
+//     }
+//   },
+//   increase: {
+//     title: 'Наращивание',
+//     id: 'increase',
+//     items: [
+//       { title: 'Снятие наращенных ногтей', cost: `${400} ₽` },
+//       { title: 'Ремонт ногтя гелем', cost: `${200} ₽` },
+//       { title: 'Наращивание + маникюр + покрытие', cost: `${3100} ₽` },
+//       { title: 'Коррекция + маникюр + покрытие', cost: `${2700} ₽` },
+//       { title: 'Донаращивание сломанного ногтя', cost: `${200} ₽` }
+//     ],
+//     images: {
+//       ellipse:
+//         'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BD%D0%B0%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=a07a6da9-4b0b-4b9b-83eb-4f168a16a303',
+//       half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BD%D0%B0%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=0f1133df-562e-43b5-8b42-a4f463129371'
+//     }
+//   },
+//   pedicure: {
+//     title: 'Педикюр',
+//     id: 'pedicure',
+//     items: [
+//       { title: 'Снятие покрытия', cost: `${200} ₽` },
+//       { title: 'Педюкюр', cost: `${1400} ₽` },
+//       { title: 'Покрытие Luxio, ONIQ', cost: `${900} ₽` },
+//       { title: 'Снятие + педикюр + покрытие', cost: `${2700} ₽` }
+//     ],
+//     images: {
+//       ellipse:
+//         'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=e5f5ea91-4b35-49bc-bedb-c1548b5143ba',
+//       half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=dc0600e2-c0f0-48a0-9030-bd10297ca7dd'
+//     }
+//   },
+//   eyebrows: {
+//     title: 'Брови',
+//     id: 'eyebrows',
+//     items: [
+//       { title: 'Коррекция бровей', cost: `${600} ₽` },
+//       { title: 'Окрашивание бровей краской', cost: `${900} ₽` },
+//       { title: 'Окрашивание бровей хной', cost: `${900} ₽` },
+//       { title: 'Коррекция и окрашивание хной /краской', cost: `${1500} ₽` },
+//       { title: 'Моделирование + коррекция + окрашивание', cost: `${2000} ₽` },
+//       { title: 'Ламинирование + кореекция', cost: `${2000} ₽` },
+//       { title: 'Ламинирование + коррекция + окрашивание', cost: `${2300} ₽` }
+//     ],
+//     images: {
+//       ellipse:
+//         'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%B1%D1%80%D0%BE%D0%B2%D0%B8-%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B0%D1%8F.png?alt=media&token=18652ada-bb81-4e2e-8af3-67f22f116d18',
+//       half: 'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fprice%2F%D0%B1%D1%80%D0%BE%D0%B2%D0%B8-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0.jfif?alt=media&token=b6dd5290-97a4-4212-b219-740c10c69056'
+//     }
+//   }
+// };
 
 export type TypeKeyPrice = keyof typeof $PRICE;
 
@@ -331,3 +331,5 @@ export const $PORTFOLIO_URL: TypeReadonlyData<string, 'array'> = [
   'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F3.jfif?alt=media&token=4c1de1e4-4611-4f4c-b2ef-7aee458b556e',
   'https://firebasestorage.googleapis.com/v0/b/avion-d6f01.appspot.com/o/xnails%2Fportfolio%2F4.jfif?alt=media&token=6850b9a1-4c9b-4179-9903-d7f348107303'
 ];
+
+//₽
